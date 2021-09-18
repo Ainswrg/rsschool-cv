@@ -40,3 +40,16 @@ If a value is present in `b`, all of its occurrences must be removed from the ot
 
 My solution:
 - `const arrayDiff = (a, b) => a.filter((i) => !b.includes(i));`
+
+### 🎓 Courses: 
+- [Web development for beginners](https://stepik.org/cert/888043)
+- [Responsive Web Design](https://www.freecodecamp.org/certification/ainswrg/responsive-web-design)
+- [JavaScript for begginers](https://stepik.org/cert/897481)
+- [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/ainswrg/javascript-algorithms-and-data-structures)
+- Front End Development Libraries on [freecodecamp](https://www.freecodecamp.org/learn/front-end-development-libraries/) (in progress)
+- JavaScript Manual on [learnjavascript.ru](https://learn.javascript.ru)
+- RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)
+
+### 🌐 Languages:
+- Russian - native
+- English - A2
