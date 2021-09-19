@@ -6,11 +6,13 @@
   --title: #17768d;
   --text: #718096;
   --border: #353e4f;
+  --code-bg: #171719;
   --code: #eaf3f5;
   --blue: #73a2ae;
   --orange: #de712c;
   --violet: #b294bb;
   --green: #2fedb45b;
+  --rgb: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -31,11 +33,11 @@ body {
   width: 80%;
   margin: 2rem auto;
   background-color: var(--white);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 25px var(--rgb);
   z-index: 2;
 }
 
-.left-section {
+.left-block {
   background-color: var(--primary);
   grid-column: span 2;
   height: 100%;
@@ -43,7 +45,7 @@ body {
   z-index: 2;
 }
 
-.right-section {
+.right-block {
   grid-column: span 5;
   background-color: var(--white);
   height: 100%;
@@ -147,7 +149,7 @@ body {
 
 .skill-title {
   text-transform: uppercase;
-  color: #f7f7f7;
+  color: var(--white);
   font-size: 1rem;
 }
 
@@ -191,7 +193,6 @@ body {
   position: absolute;
   top: 2rem;
   width: 57.149%;
-  height: 500px;
   object-fit: cover;
   opacity: 0.8;
 }
@@ -205,16 +206,13 @@ body {
   mix-blend-mode: overlay;
 }
 
-.jumbotron-text {
+.jumbotron h2 {
   position: relative;
   z-index: 10;
   display: flex;
   justify-content: center;
   height: 500px;
   align-items: center;
-}
-
-.jumbotron-text h2 {
   font-size: 4em;
   font-weight: 800;
   text-align: center;
@@ -226,7 +224,7 @@ body {
 }
 
 .code-examples__code {
-  background-color: #171719;
+  background-color: var(--code-bg);
   border-radius: 0.5rem;
   color: var(--blue);
   font-size: 0.9rem;
@@ -253,7 +251,7 @@ body {
 
 .curses ul li {
   padding-left: 2rem;
-  background: url(https://cdn-icons-png.flaticon.com/512/29/29302.png);
+  background: url("https://cdn-icons-png.flaticon.com/512/29/29302.png");
   background-position: 0 0;
   background-size: 0.9rem 0.9rem;
   background-repeat: no-repeat;
@@ -312,30 +310,30 @@ footer span {
   color: var(--text);
 }
 
-@media screen and (max-width:823px){
-  .title::after{
-      width: 40%;
+@media screen and (max-width: 823px) {
+  .title::after {
+    width: 40%;
   }
 }
 
-@media screen and (max-width:681px){
-  .title::after{
-      width: 25%;
+@media screen and (max-width: 681px) {
+  .title::after {
+    width: 25%;
   }
 }
-@media screen and (max-width:780px){
-  .left-section{
-      grid-column: span 3;
+@media screen and (max-width: 780px) {
+  .left-block {
+    grid-column: span 3;
   }
-  .right-section{
-      grid-column: span 4;
+  .right-block {
+    grid-column: span 4;
   }
 }
-@media screen and (max-width:1200px){
-  .main-content{
-      grid-template-columns: repeat(1, 1fr);
+@media screen and (max-width: 1200px) {
+  .main-content {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .profile > img{
+  .profile > img {
     width: 40%;
   }
   .jumbotron {
@@ -344,21 +342,21 @@ footer span {
   .jumbotron {
     display: none;
   }
-  .left-section {
+  .left-block {
     grid-column: span 7;
   }
-  .right-section {
+  .right-block {
     grid-column: span 7;
   }
 }
-@media screen and (max-width:700px){
-  .profile > img{
-      width: 60%;
+@media screen and (max-width: 700px) {
+  .profile > img {
+    width: 60%;
   }
 }
-@media screen and (max-width:390px){
-  .profile__name{
-      font-size: 1.5rem;
+@media screen and (max-width: 390px) {
+  .profile__name {
+    font-size: 1.5rem;
   }
   .title::after {
     top: 100%;
