@@ -56,6 +56,7 @@ body {
 .profile {
   width: 100%;
   border-bottom: 2px solid var(--border);
+  text-align: center;
 }
 
 .profile > img {
@@ -230,6 +231,7 @@ body {
   color: var(--blue);
   font-size: 0.9rem;
   display: flex;
+  overflow-y: auto;
 }
 
 .orange {
@@ -308,4 +310,59 @@ footer span {
   text-align: center;
   font-size: 0.9rem;
   color: var(--text);
+}
+
+@media screen and (max-width:823px){
+  .title::after{
+      width: 40%;
+  }
+}
+
+@media screen and (max-width:681px){
+  .title::after{
+      width: 25%;
+  }
+}
+@media screen and (max-width:780px){
+  .left-section{
+      grid-column: span 3;
+  }
+  .right-section{
+      grid-column: span 4;
+  }
+}
+@media screen and (max-width:1200px){
+  .main-content{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .profile > img{
+    width: 40%;
+  }
+  .jumbotron {
+    display: none;
+  }
+  .jumbotron {
+    display: none;
+  }
+  .left-section {
+    grid-column: span 7;
+  }
+  .right-section {
+    grid-column: span 7;
+  }
+}
+@media screen and (max-width:700px){
+  .profile > img{
+      width: 60%;
+  }
+}
+@media screen and (max-width:390px){
+  .profile__name{
+      font-size: 1.5rem;
+  }
+  .title::after {
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
 }
