@@ -6,6 +6,10 @@
   --title: #17768d;
   --text: #718096;
   --border: #353e4f;
+  --code: #eaf3f5;
+  --blue: #73a2ae;
+  --orange: #de712c;
+  --violet: #b294bb;
 }
 
 * {
@@ -108,7 +112,7 @@ body {
   z-index: 2;
 }
 
-.about-me__title {
+.title {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1.3rem;
@@ -116,7 +120,7 @@ body {
   color: var(--primary);
 }
 
-.about-me__title::after {
+.title::after {
   content: "";
   position: absolute;
   width: 60%;
@@ -126,6 +130,10 @@ body {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.sect {
+  padding-bottom: 2rem;
 }
 
 .about-me__text {
@@ -170,4 +178,37 @@ body {
   text-transform: uppercase;
   margin: 0 5rem;
   opacity: 0.8;
+}
+
+.skills__code {
+  background-color: #171719;
+  border-radius: 0.5rem;
+  color: var(--blue);
+  font-size: 0.9rem;
+  display: flex;
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.violet {
+  color: var(--violet);
+}
+
+.code {
+  color: var(--code);
+}
+
+.curses ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+.curses ul li {
+  padding-left: 2rem;
+  background: url(https://cdn-icons-png.flaticon.com/512/29/29302.png);
+  background-position: 0 0;
+  background-size: 0.9rem 0.9rem;
+  background-repeat: no-repeat;
 }
