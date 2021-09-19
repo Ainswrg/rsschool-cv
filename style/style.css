@@ -1,0 +1,99 @@
+:root {
+  --primary: #2c323d;
+  --secondary: #f7f7f7;
+  --white: #fff;
+  --body: #e5e5e5;
+  --title: #17768d;
+  --contacts: #718096;
+  --border: #353e4f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: var(--body);
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  min-height: 100vh;
+  width: 80%;
+  margin: 2rem auto;
+  background-color: var(--white);
+}
+
+.left-section {
+  background-color: var(--primary);
+  grid-column: span 2;
+  height: 100%;
+}
+
+.right-section {
+  grid-column: span 5;
+  background-color: var(--white);
+  height: 100%;
+}
+
+.left-content {
+  padding: 1rem 2rem;
+}
+
+.profile {
+  width: 100%;
+  border-bottom: 2px solid var(--border);
+}
+
+.profile > img {
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+}
+
+.profile__name {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 1.2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile__career {
+  font-size: 1.4rem;
+  color: var(--title);
+  padding-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--secondary);
+  padding-top: 3rem;
+}
+
+.contact-info > ul {
+  padding: 1.4rem 0;
+}
+
+.contact-info > ul > li {
+  padding: 0.3rem 0;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  color: var(--contacts);
+}
+
+.icons {
+  width: 20px;
+  margin: 5px;
+}
