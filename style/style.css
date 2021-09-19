@@ -1,10 +1,10 @@
 :root {
   --primary: #2c323d;
-  --secondary: #f7f7f7;
+  --secondary: #3ae9ba;
   --white: #fff;
   --body: #e5e5e5;
   --title: #17768d;
-  --contacts: #718096;
+  --text: #718096;
   --border: #353e4f;
 }
 
@@ -26,12 +26,16 @@ body {
   width: 80%;
   margin: 2rem auto;
   background-color: var(--white);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  z-index: 2;
 }
 
 .left-section {
   background-color: var(--primary);
   grid-column: span 2;
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .right-section {
@@ -77,7 +81,7 @@ body {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--secondary);
+  color: var(--white);
   padding-top: 3rem;
 }
 
@@ -90,10 +94,80 @@ body {
   display: flex;
   list-style-type: none;
   align-items: center;
-  color: var(--contacts);
+  color: var(--text);
 }
 
 .icons {
   width: 20px;
   margin: 5px;
+}
+
+.right-main-content {
+  padding: 2rem 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-me__title {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.3rem;
+  position: relative;
+  color: var(--primary);
+}
+
+.about-me__title::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.2rem;
+  background-color: var(--secondary);
+  border-radius: 12px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-me__text {
+  line-height: 1.6rem;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.jumbotron video {
+  position: absolute;
+  top: 2rem;
+  width: 57.149%;
+  height: 500px;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 2rem;
+  width: 57.149%;
+  height: 100%;
+  background: var(--secondary);
+  mix-blend-mode: overlay;
+}
+
+.jumbotron-text {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center;
+}
+
+.jumbotron-text h2 {
+  font-size: 4em;
+  font-weight: 800;
+  text-align: center;
+  color: var(--white);
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 0 5rem;
+  opacity: 0.8;
 }
