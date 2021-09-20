@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="./style/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap"
@@ -16,23 +15,66 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github-dark.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
 
   <body>
     <main class="main-content">
+      <div class="header">
+        <div class="header__container">
+          <div class="header__menu menu">
+            <div class="menu__icon">
+              <span></span>
+            </div>
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li>
+                  <a data-goto=".contact-info" href="#" class="menu__link">Contacts</a>
+                </li>
+                <li>
+                  <a data-goto=".skills-section" href="#" class="menu__link">Skills</a>
+                </li>
+                <li>
+                  <a data-goto=".about-me" href="#" class="menu__link">About me</a>
+                </li>
+                <li>
+                  <a data-goto=".code-examples" href="#" class="menu__link"
+                    >Code examples</a
+                  >
+                </li>
+                <li>
+                  <a data-goto=".curses" href="#" class="menu__link">Curses</a>
+                </li>
+                <li>
+                  <a data-goto=".languages" href="#" class="menu__link">Language</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
       <div class="left-block">
         <div class="left-content">
           <header class="profile">
             <img src="./assets/image/avatar.jpg" alt="avatar" />
-            <h2 class="profile__name">Jaslan Daulenov</h2>
-            <p class="profile__career">Front-End Developer</p>
+            <h1 class="profile__name">Jaslan Daulenov</h1>
+            <h4 class="profile__career">Front-End Developer</h4>
           </header>
           <article class="contact-info">
             <h3 class="main-title">Contact Info</h3>
             <ul>
               <li>
                 <img class="icons" src="./assets/image/envelope-solid.svg" alt="gmail" />
-                jaslan.daulenov@gmail.com
+                <h5>jaslan.daulenov@gmail.com</h5>
               </li>
               <li>
                 <img
@@ -40,60 +82,60 @@
                   src="./assets/image/telegram-brands.svg"
                   alt="telegram"
                 />
-                @ainswrg
+                <h5>@ainswrg</h5>
               </li>
               <li>
                 <img class="icons" src="./assets/image/discord.svg" alt="discord" />
-                Ainswrg#7543
+                <h5>Ainswrg#7543</h5>
               </li>
               <li>
                 <img src="./assets/image/github-brands.svg" alt="github" class="icons" />
-                ainswrg
+                <h5>ainswrg</h5>
               </li>
             </ul>
           </article>
           <article class="skills-section">
-            <h3 class="main-title">Skills</h3>
+            <h3 class="main-title anchor">Skills</h3>
             <ul>
               <li>
-                <p class="skill-title">HTML/CSS</p>
+                <h6 class="skill-title">HTML/CSS</h6>
                 <div class="progress-bar">
                   <div class="progress w-progress"></div>
                 </div>
               </li>
               <li>
-                <p class="skill-title">Javascript</p>
+                <h6 class="skill-title">Javascript</h6>
                 <div class="progress-bar">
                   <div class="progress w-progress"></div>
                 </div>
               </li>
 
               <li>
-                <p class="skill-title">TypeScript</p>
+                <h6 class="skill-title">TypeScript</h6>
                 <div class="progress-bar">
                   <div class="progress n-progress"></div>
                 </div>
               </li>
               <li>
-                <p class="skill-title">React</p>
+                <h6 class="skill-title">React</h6>
                 <div class="progress-bar">
                   <div class="progress w-progress"></div>
                 </div>
               </li>
               <li>
-                <p class="skill-title">Redux</p>
+                <h6 class="skill-title">Redux</h6>
                 <div class="progress-bar">
                   <div class="progress n-progress"></div>
                 </div>
               </li>
               <li>
-                <p class="skill-title">Photoshop</p>
+                <h6 class="skill-title">Photoshop</h6>
                 <div class="progress-bar">
                   <div class="progress n-progress"></div>
                 </div>
               </li>
               <li>
-                <p class="skill-title">Bootstrap</p>
+                <h6 class="skill-title">Bootstrap</h6>
                 <div class="progress-bar">
                   <div class="progress w-progress"></div>
                 </div>
@@ -114,6 +156,7 @@
             loop
             autoplay
           ></video>
+          <div class="fade"></div>
           <div class="overlay"></div>
         </article>
 
@@ -129,10 +172,8 @@
 
           <section class="code-examples sect">
             <h2 class="title">Code Examples</h2>
-            <pre class="code-examples__code">
-              <code>
-                <span class="violet">const</span> <span class="orange">arrayDiff</span> <span class="code">=</span> <span class="code">(</span> a, b <span class="code">)</span> <span class="code">=></span> a<span class="code">.</span>filter<span class="code">(( </span>i<span class="code"> )</span> <span class="code">=</span> <span class="code">!</span>b<span class="code">.</span>includes<span class="code">(</span> i <span class="code">));</span>
-              </code>
+            <pre>
+              <code class="language-javascript hljs">const arrayDiff = ( a, b ) => a.filter(( i ) = !b.includes( i ));</code>
             </pre>
           </section>
 
@@ -141,43 +182,97 @@
             <ul>
               <li>
                 Web development for beginners -
-                <a href="https://stepik.org/cert/888043">certificate</a>
+                <a href="https://stepik.org/cert/888043" target="_blank"> certificate </a>
               </li>
               <li>
                 Responsive Web Design -
                 <a
                   href="https://www.freecodecamp.org/certification/ainswrg/responsive-web-design"
-                  >certificate</a
+                  target="_blank"
                 >
+                  certificate
+                </a>
               </li>
               <li>
                 JavaScript for begginers -
-                <a href="https://stepik.org/cert/897481">certificate</a>
+                <a href="https://stepik.org/cert/897481" target="_blank"> certificate </a>
               </li>
               <li>
                 JavaScript Algorithms and Data Structures -
                 <a
                   href="https://www.freecodecamp.org/certification/ainswrg/javascript-algorithms-and-data-structures"
-                  >certificate</a
+                  target="_blank"
                 >
+                  certificate
+                </a>
               </li>
               <li>
                 Front End Development Libraries on
                 <a
                   href="https://www.freecodecamp.org/learn/front-end-development-libraries/"
-                  >freecodecamp</a
+                  target="_blank"
                 >
+                  freecodecamp
+                </a>
                 (in progress)
               </li>
               <li>
                 JavaScript Manual on
-                <a href="https://learn.javascript.ru">learn.javascript.ru</a>
+                <a href="https://learn.javascript.ru" target="_blank">
+                  learn.javascript.ru
+                </a>
               </li>
               <li>
                 RS Schools Course «JavaScript/Front-end. Stage 1»
                 <a href="https://rs.school/">rs.school</a>
               </li>
             </ul>
+          </section>
+
+          <section class="my-projects section">
+            <h2 class="title">My projects</h2>
+            <div class="my-projects__project">
+              <figure>
+                <a href="https://netflix-clone-a2ff8.web.app/browse" target="_blank">
+                  <img src="./assets/image/netflix.png" alt="netflix" />
+                </a>
+                <figcaption>Netflix clone</figcaption>
+              </figure>
+              <div>
+                <p>
+                  Netflix clone with firebase login and registration, with TMDB API, and
+                  youtube trailers
+                </p>
+                <ul>
+                  <li>
+                    Stack:
+                    <p>
+                      React, Context, Firebase, TMDB API,React-router-dom,
+                      React-hook-form, Styled-components, fuse.js, react-youtube,
+                      movie-trailer.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="my-projects__project">
+              <figure>
+                <a href="https://salty-refuge-71335.herokuapp.com/" target="_blank">
+                  <img src="./assets/image/todo.png" alt="netflix" />
+                </a>
+                <figcaption>ToDo list</figcaption>
+              </figure>
+              <div>
+                <p>Todo list to manage their tasks & projects</p>
+                <ul>
+                  <li>
+                    Stack:
+                    <p>React, Context, Styled-components</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section class="languages section">
@@ -208,5 +303,7 @@
         </div>
       </footer>
     </main>
+
+    <script src="./app.js"></script>
   </body>
 </html>
