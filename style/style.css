@@ -563,5 +563,8 @@ footer span {
     .my-projects__project figure img {
       width: 100%;
     }
+    .curses ul{
+      padding: 0;
+    }
   }
 }
