@@ -58,6 +58,7 @@ const score = [
   ["adaptive", 10],
   ["burger", 10],
   ["avatar", 10],
+  ['ul > li', 10],
   ["info", 10],
   ["code", 10],
   ["project", 10],
